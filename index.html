@@ -68,9 +68,10 @@ margin-bottom:6px;
 font-size:2em;
 display:grid;
 grid:
-"funny1 funny2 funny3" auto
+"funny1 funny2 funny3" min-content
  / min-content min-content min-content;
 justify-content:space-evenly;
+align-content:top;
 }
 
 .funny {
@@ -181,8 +182,8 @@ Please select a save file.
 </div>
 </div>
 <div class="footer">
-<div class="funny">Copy</div>
-<div class="funny">Erase</div>
-<div class="funny">Japanese</div>
+<div class="funny" onClick="navigator.clipboard.writeText(document.URL);">Copy</div>
+<div class="funny" id="deletethis" onClick="document.getElementById('deletethis').remove()">Erase</div>
+<a href="https://catherinegrimalkin-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=en-US&_x_tr_pto=wapp" style="text-decoration:none"><div class="funny">Japanese</div></a>
 </div>
 </body>
